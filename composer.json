@@ -1,0 +1,28 @@
+{
+    "name": "martin3r/platform-laboratory",
+    "description": "Labor-Katalog für Platform — frei pflegbarer Katalog von Laboranforderungen/-analyten (LOINC), referenziert von erbrachten Leistungen (encounter Service, morphMap 'lab_test'). Ergebnisse laufen perspektivisch als Observations.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Platform Team",
+            "email": "team@platform.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Platform\\Laboratory\\": "src/",
+            "Platform\\Laboratory\\Database\\": "database/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Platform\\Laboratory\\LaboratoryServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
