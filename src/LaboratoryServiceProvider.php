@@ -3,7 +3,6 @@
 namespace Platform\Laboratory;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Livewire\Livewire;
 use Platform\Core\PlatformCore;
@@ -28,7 +27,7 @@ class LaboratoryServiceProvider extends ServiceProvider
         if (
             config()->has('laboratory.routing') &&
             config()->has('laboratory.navigation') &&
-            Schema::hasTable('modules')
+            PlatformCore::modulesTableExists()
         ) {
             PlatformCore::registerModule([
                 'key'        => 'laboratory',
